@@ -60,9 +60,23 @@ header {
     color: var(--primary);
 }
 
-.logo i {
-    margin-right: 0.5rem;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
+
+.logo lottie-player {
+    width: 80px;
+    height: 80px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* adjust as needed */
+}
+
 
 /* NAVIGATION */
 nav ul {
@@ -106,20 +120,12 @@ nav a.active::after {
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.7)),
-        url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05');
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
+    background: linear-gradient(to top, #87ceeb, #87ceeb);
+    padding: 4rem 2rem;
     text-align: center;
-    color: white;
-    animation: fadeIn 1s ease;
+    color: #333;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 .hero h1 {
     font-size: 3rem;
