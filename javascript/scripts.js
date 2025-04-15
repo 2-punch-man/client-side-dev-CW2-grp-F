@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const flights = [
-        { id: 1, airline: 'Biman Bangladesh', from: 'DAC', to: 'LHR', departure: '2023-12-15', price: 699 },
-        { id: 2, airline: 'British Airways', from: 'DAC', to: 'LHR', departure: '2023-12-15', price: 799 },
-        { id: 3, airline: 'Emirates', from: 'CGP', to: 'MAN', departure: '2023-12-16', price: 849 },
-        { id: 4, airline: 'Qatar Airways', from: 'DAC', to: 'LHR', departure: '2023-12-17', price: 899 },
-        { id: 5, airline: 'Turkish Airlines', from: 'CGP', to: 'MAN', departure: '2023-12-18', price: 759 },
-        { id: 6, airline: 'Etihad Airways', from: 'DAC', to: 'LHR', departure: '2023-12-19', price: 819 }
+        { id: 1, airline: 'Biman Bangladesh', from: 'DAC', to: 'LHR', departure: '2025-12-15', price: 699 },
+        { id: 2, airline: 'British Airways', from: 'DAC', to: 'LHR', departure: '2025-12-15', price: 799 },
+        { id: 3, airline: 'Emirates', from: 'CGP', to: 'MAN', departure: '2025-12-16', price: 849 },
+        { id: 4, airline: 'Qatar Airways', from: 'DAC', to: 'LHR', departure: '2025-12-17', price: 899 },
+        { id: 5, airline: 'Turkish Airlines', from: 'CGP', to: 'MAN', departure: '2025-12-18', price: 759 },
+        { id: 6, airline: 'Etihad Airways', from: 'DAC', to: 'LHR', departure: '2025-12-19', price: 819 }
     ];
 
     const searchForm = document.getElementById('searchForm');
