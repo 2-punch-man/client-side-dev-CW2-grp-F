@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="flights.css">
+    <link rel="stylesheet" href="css/flights.css">
 </head>
-    <body>
+<body>
     <header>
         <div class="container">
             <div class="logo">
@@ -32,6 +32,69 @@
             </div>
         </div>
     </header>
-    </body>
-</html>
+    
+    <section class="flight-search">
+        <div class="container">
+            <h1>Find Your Flight</h1>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label>From</label>
+                    <select id="from">
+                        <option value="DAC">Dhaka (DAC)</option>
+                        <option value="CGP">Chittagong (CGP)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <select id="to">
+                        <option value="LHR">London (LHR)</option>
+                        <option value="MAN">Manchester (MAN)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Departure</label>
+                    <input type="date" id="departure" required>
+                </div>
+                <button type="submit" class="btn">Search Flights</button>
+            </form>
+        </div>
+    </section>
 
+    <section class="flight-results">
+        <div class="container" id="flightsContainer">
+            <!-- JS will load results -->
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Booking</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <button type="submit" class="btn">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Booking Confirmed!</h2>
+            <p id="confirmationText"></p>
+            <button class="btn" onclick="location.reload()">New Search</button>
+        </div>
+    </div>
+
+    <script src="javascript/scripts.js"></script>
+</body>
+</html>
