@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const flights = [
-        { id: 1, airline: 'Biman Bangladesh', from: 'DAC', to: 'LHR', departure: '2025-12-15', price: 699 },
+        { id: 1, airline: 'Biman Bangladesh', from: 'DAC', to: 'LHR', departure: '2025-12-14', price: 699 },
         { id: 2, airline: 'British Airways', from: 'DAC', to: 'LHR', departure: '2025-12-15', price: 799 },
         { id: 3, airline: 'Emirates', from: 'CGP', to: 'MAN', departure: '2025-12-16', price: 849 },
         { id: 4, airline: 'Qatar Airways', from: 'DAC', to: 'LHR', departure: '2025-12-17', price: 899 },
