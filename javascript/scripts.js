@@ -35,13 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Apply animations to cards
-    document.querySelectorAll('.feature-card, .flight-card').forEach((el) => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease';
-        observer.observe(el);
-    });
-
+     const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                requestAnimationFrame(() => {
+                    entry.target.style.transition = `
+                        opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 50}ms,
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 50}ms
+                    `;
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    }, { threshold: 0.1 });
+    
     function displayFlights(list) {
         flightsContainer.innerHTML = list.map(flight => `
             <div class="flight-card">
